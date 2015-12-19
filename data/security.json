@@ -1,0 +1,11 @@
+{
+   "cloudant": {
+       "3c2d8585-7642-4995-98d0-cca3ae5730c1-bluemix": [
+         "_reader",
+         "_writer",
+         "_admin",
+         "_replicator"
+       ],
+       "nobody": ["_reader"]
+  }
+}

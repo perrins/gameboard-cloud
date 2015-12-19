@@ -1,0 +1,88 @@
+{
+
+  "docs": [
+    {
+      "gid": 1,
+      "imageUrl": "http://fc06.deviantart.net/fs49/f/2009/211/9/8/Assassin__s_Creed_fanart_by_luulala.jpg",
+      "title": " Action Adventure",
+      "subTitle": "Games involving action",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+    {
+      "gid": 2,
+      "imageUrl": "http://www.independent.co.uk/incoming/article9721378.ece/alternates/w460/fifa15_pl_1920x1080_v21-600x330%20(1).jpg",
+      "title": "Sport",
+      "subTitle": "Sports based games",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+    {
+      "gid": 3,
+      "imageUrl": "http://fc05.deviantart.net/fs71/i/2012/083/8/f/call_of_duty__ghost_by_macheteelbows-d4tr451.jpg",
+      "title": "First Person Shooter",
+      "subTitle": "First person shooter games",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+    {
+      "gid": 4,
+      "imageUrl": "http://press-start.com.au/wp-content/uploads/2014/08/Simified-TS4-SimsCrowd-1080p.png",
+      "title": "Simulation",
+      "subTitle": "Simulation games",
+      "count": 4,
+      "endDate": "2015-12-31"
+    },
+    {
+      "gid": 5,
+      "imageUrl": "http://www.gameandmovietrailers.com/wp-content/uploads/2013/08/the-elder-scrolls-wallpaper.jpg",
+      "title": "RPG",
+      "subTitle": "Role Playing Games",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+    {
+      "gid": 6,
+      "imageUrl": "http://cdn3-www.craveonline.com/assets/uploads/gallery/forza-6-wish-list-what-one-forza-fan-wants-to-see-from-the-next-release/60fps.jpg",
+      "title": "Racing",
+      "subTitle": "Racing Games",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+    {
+      "gid": 7,
+      "imageUrl": "http://www.desktopwallpapers4.me/games/mortal-kombat-24878/",
+      "title": "Combat",
+      "subTitle": "Combat and Fighting",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+
+    {
+      "gid": 8,
+      "imageUrl": "http://ps4attitude.com/wp-content/uploads/2014/03/fez-wallpaper.jpg",
+      "title": "Puzzle",
+      "subTitle": "Puzzle and Mind Games",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+
+    {
+      "gid": 9,
+      "imageUrl": "http://i.neoseeker.com/n/1/700pxcarthage_sacredband_thumb.jpg",
+      "title": "Strategy",
+      "subTitle": "Strategy games",
+      "count": 0,
+      "endDate": "2015-12-31"
+    },
+  {
+    "gid": 10,
+    "imageUrl": "http://images-eds.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcRY.yavzo7nYP0X88I63UeJxs_ICOvM1iX20FQwMAmM.ULhqM_sGeT5cmfsMo4irTYKJEHa9uM4ekQETZwg.OTtQYWoVZygJU8nHV60GRsdHQc3dlfkqv9829HliIe6RSEtTlCZ5.s9rIja7jRVYK_VwWFj7EQkK1MupIGwBV0G0-&format=jpg",
+    "title": "Minecraft",
+    "subTitle": "Minecraft Platform games",
+    "count": 0,
+    "endDate": "2015-12-31"
+  }
+
+]
+}

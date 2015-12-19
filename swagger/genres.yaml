@@ -1,0 +1,64 @@
+swagger: '2.0'
+info:
+  title: Gameboard Genres
+  description: Retreive a list of Genres from Gameboard Cloud
+  version: 1.0.0
+host: localhost
+schemes:
+  - http
+basePath: /gameboard-cloud/v1/apps/d885d542-0c0d-4b51-b095-e4d4fe65d56c
+produces:
+  - application/json
+paths:
+  /genres:
+    get:
+      summary: 'Retrieve a list of Genres'
+      description: 
+        'The top level cateogiresation of Gameboard so a user can navigate through the Genres, Categories and Games, and then finally to Boards'
+      tags:
+        - Genres
+      responses:
+        '200':
+          description: An array of Genres
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Genre'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+definitions:
+  Genre:
+    type: object
+    properties:
+      gid:
+        type: integer
+        description: 'Unique Genre ID'
+      imageUrl:
+        type: string
+        description: 'Image URL to be displayed.'
+      title:
+        type: string
+        description: 'Display name of the Genre.'
+      subTitle:
+        type: string
+        description: 'Capacity of product. For example, 4 people.'
+      count:
+        type: integer
+        description: 'Number of Categories within the Genres'
+      endDate:
+        type: string
+        description: 'Date the Genre operates from'
+
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

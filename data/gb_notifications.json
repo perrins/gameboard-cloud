@@ -1,0 +1,54 @@
+
+[   
+    {
+        "type"  : "RANKING",
+        "uuid": 393030303031,
+        "title": "Best head shots",
+        "message": "Your video is now ranked #23 in the Head shots board",
+        "bid"    : 1001,
+        "date"   : "21/11/2014",
+        "time"   : "09:34am"
+    },
+
+    {
+        "type"  : "FAVOURITE",
+        "uuid": 393030303032,
+        "title": "You have been favourited",
+        "message": "You have been favourited by member Matthew Perrins",
+        "bid"    : 1001,
+        "muuid"  : 101920202920,
+        "date"   : "19/11/2014",
+        "time"   : "11:34am"
+    },
+
+    {
+        "type"  : "MESSAGE",
+        "uuid": 393030303033,
+        "title": "New Message",
+        "message": "Hi how are you doing wanted say what a great video you have posted",
+        "muuid"  : 101920202920,
+        "date"   : "24/11/2014",
+        "time"   : "14:34pm"
+    },
+
+    {
+        "type"  : "SYSTEM",
+        "uuid": 393030303036,
+        "title": "Board Ends",
+        "message": "The board you have your video on will end in 1 day 3hr and 23mins",
+        "bid"  : 1001,
+        "date"   : "24/11/2014",
+        "time"   : "14:34pm"
+    },
+
+    {
+        "type"  : "PRIZE",
+        "uuid": 393030303035,
+        "title": "You Won!",
+        "message": "You have won a prize for being ranked #8 in the Head Shots Board",
+        "bid"  : 1001,
+        "date"   : "02/04/2015",
+        "time"   : "14:34pm"
+    }
+
+]    

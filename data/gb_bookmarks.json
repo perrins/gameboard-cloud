@@ -1,0 +1,23 @@
+
+{
+    {
+        "type"  : "GAME",
+        "gid": 1,
+        "title": "Call of Duty Ghosts",
+        "subtitle": "The ultimate combat first person action games"
+    },
+    {
+        "type"  : "CATEGORY",
+        "gmid": 101,
+        "genid" : 1,
+        "title": "Platform",
+        "subtitle": "All the best platform games"
+
+    },        
+    {
+        "type"  : "BOARD",
+        "bid": 1001,
+        "title": "Minecraft Best Buildings",
+        "subtitle": "Best buildings ever been built"
+    }
+]    

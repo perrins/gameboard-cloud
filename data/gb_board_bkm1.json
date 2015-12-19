@@ -1,0 +1,18 @@
+{
+    "_id": "7151c97ba724ddea0dafeec4107727e7",
+    "_rev": "6-85ac790a96db9534bc1ca1d60b9bbdd1",
+    "bid": 1001,
+    "title": "Golden Gun",
+    "subtitle": "Best golden gun moments",
+    "description": "Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
+    "banner"   : "http://terminalgamer.com/wp-content/uploads/2013/10/Call-Of-Duty-Ghosts-Background-515x290.jpg",
+
+  "number": 0,
+    "prizes": 0,
+    "date": "01/05/2014",
+    "videos": {
+        "total_rows": 0,
+        "offset": 0,
+        "rows": []
+    }
+}

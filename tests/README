@@ -1,0 +1,49 @@
+# testing blahth timepush to git to triger ci build
+
+
+Adapter Tests - run stand-alone or under CI build
+
+Tests can be run under npm 
+
+cd to the unit test directory within Jenkins checked out repository
+install the adapter invoker utility module
+Then all other dependencies
+Finally execute the test script
+
+
+    cd Homebase/adapters/UnitTest
+
+## MJP Can we change the name of my_modules to modules or project_modules, they are not mine :)
+
+    npm install my_modules
+    npm install
+
+then 
+    npm test
+    
+    
+## MJP Its not very clear how you run the tests for just one adapter here, add some samples.    
+    
+to run the script named "test" or any other of the scripts defined in package.json
+    
+    npm run-script <scriptName>
+
+The test names are listed in the package.json file in the UnitTest directory and reference each test sequence
+
+eg. npm run-script rvtest
+
+    
+For example buildTestAll runs all test .js files gathering the xunit report, in the script we
+redirect this to a file in the workspace, and this is then picked up by post build Jenkins reporting.
+
+Note that domain, port and contextRoot for stub server can be 
+overridden by an additional
+
+    npm config set AdapterTests:port=10080
+    npm config set AdapterTests:domain=localhost
+    npm config set AdapterTests:contextRoot=Homebase
+    
+command
+
+Vijay - Testing new feature here....
+Prachi-testing to create new feature

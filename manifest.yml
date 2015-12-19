@@ -1,0 +1,13 @@
+applications:
+- services:
+  - gameboard-cloud-MAS
+  - gameboard-cloud-Push
+  - gameboard-cloud-MobileData
+  disk_quota: 1024M
+  host: gameboard-cloud
+  name: gameboard-cloud
+  command: node app.js
+  path: .
+  domain: eu-gb.mybluemix.net
+  instances: 1
+  memory: 128M

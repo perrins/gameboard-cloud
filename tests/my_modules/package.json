@@ -1,0 +1,14 @@
+{
+  "name": "wlAdapter",
+
+  "version": "0.1.0",
+  "author": "Dave Artus",
+  "description": "generic test harness for adapters",
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "main":"invokeWLProcedure.js",
+  "repository" :
+  {
+  }
+}
