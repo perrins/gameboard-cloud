@@ -1,0 +1,106 @@
+
+{"docs": [{
+    "genid": 1,
+    "gid" : 1,
+    "loopback__model__name":"Games",
+    "banners": [{
+            "title": "Call of Duty",
+            "subTitle": "Amazing first person action",
+            "imageUrl": "http://terminalgamer.com/wp-content/uploads/2013/10/Call-Of-Duty-Ghosts-Background-515x290.jpg"
+        }, {
+            "title": "Battle Field 4",
+            "subTitle": "You will never see game action like this",
+            "imageUrl": "http://gamingbolt.com/wp-content/uploads/2013/03/battlefield-4-cover-image.jpg"
+        }, {
+            "title": "Another Game",
+            "subTitle": "You will never see game action like this",
+            "imageUrl": "http://images.forwallpaper.com/files/thumbs/preview/38/383000__action-game-wallpaper_p.jpg"
+        }
+    ],
+    "games": [
+
+        {
+            "gmid": 101,
+            "imageUrl": "http://www.pcgamewatch.net/wp-content/uploads/2010/07/shooter.jpg",
+            "title": "Call of Duty Ghosts",
+            "subtitle": "The ultimate combat first person action games",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 8
+        }, {
+            "gmid": 102,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Battle Field 4",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 103,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Craigs Game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 104,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 105,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 106,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 107,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 108,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 109,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }, {
+            "gmid": 110,
+            "imageUrl": "http://i.telegraph.co.uk/multimedia/archive/01401/world-of-warcraft_1401366c.jpg",
+            "title": "Another game",
+            "subtitle": "Role Playing & RPGs",
+            "note": "A note describing the game",
+            "rating": "18",
+            "count": 4
+        }
+
+    ]
+}]
+}

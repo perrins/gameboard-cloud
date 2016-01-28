@@ -1,0 +1,7 @@
+{
+  "views": {
+    "bookmarks": {
+      "map": "function(doc) {\n  emit(doc.muuid,1);\n}"
+    }
+  }
+}

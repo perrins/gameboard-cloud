@@ -1,0 +1,14 @@
+{
+  "views": {
+    "view": {
+      "map": "function(doc) {\n  emit(doc._id, 1);\n  emit(doc.bid,1);\n}"
+    }
+  },
+  "language": "javascript",
+  "indexes": {
+    "search": {
+      "analyzer": "standard",
+      "index": "function(doc) {\n    \nindex('search',\ndoc.bid+\" \"+\ndoc.title+\" \"+\ndoc.description+\" \"+\ndoc.ytid+\" \"+\ndoc.ytimage+\" \"+\ndoc.views+\" \"+\ndoc.recorddate+\" \"+\ndoc.platform+\" \"+\ndoc.rating+\" \"+\ndoc.muuid +\" \"+\ndoc.location+\" \", \n{'store':false,'index':true});    \n    \nindex('bid', doc.bid, {'store':true,'index':true});\nindex(\"title\", doc.title,{'store':true});\nindex(\"description\",doc.description,{'store':true});\nindex('ytid', doc.ytid, { 'store':true});\nindex('ytimage', doc.ytimage, {'store':true});\nindex('rank', doc.rank, { 'facet': true ,'store':true});\nindex('views', doc.views, {'store':true});\nindex('muuid', doc.muuid, {'store':true});\nindex('location', doc.location,{'store':true});\nindex('recorddate', doc.recorddate,{'store':true});\nindex('platform', doc.platform,{'store':true});\nindex('rating', doc.rating,{'store':true});\n}\n\t"
+    }
+  }
+}

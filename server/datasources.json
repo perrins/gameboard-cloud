@@ -1,0 +1,44 @@
+{
+  "cloudant": {
+    "database": "gameboard",
+    "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+    "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+    "name": "cloudant",
+    "connector": "cloudant"
+  },
+  "gb_categories": {
+    "database": "gb_categories",
+    "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+    "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+    "name": "gb_categories",
+    "connector": "cloudant"
+  },
+  "gb_videos": {
+    "database": "gb_videos",
+    "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+    "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+    "name": "gb_videos",
+    "connector": "cloudant"
+  },
+  "gb_boards": {
+    "database": "gb_boards",
+    "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+    "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+    "name": "gb_boards",
+    "connector": "cloudant"
+  },
+  "gb_metadata": {
+    "database": "gb_metadata",
+    "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+    "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+    "name": "gb_metadata",
+    "connector": "cloudant"
+  },
+  "gb_members": {
+    "database": "gb_members",
+    "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+    "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+    "name": "gb_members",
+    "connector": "cloudant"
+  }
+}

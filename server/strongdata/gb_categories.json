@@ -1,0 +1,34 @@
+{"docs": [
+    {	
+	"gmid"	   : 101,
+	"loopback__model__name":"Categories",
+	"banner"   : "http://terminalgamer.com/wp-content/uploads/2013/10/Call-Of-Duty-Ghosts-Background-515x290.jpg",
+	"categories" : [
+		{
+			"bid"        	: 1001,
+			"title"     	: "Golden Gun",
+			"subtitle"  	: "Best golden gun moments",
+			"description" 	:"Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
+			"videos"    	: 1234,
+			"views"  		: "1,2345,000"
+		},
+		{
+			"bid"        	: 1002,
+			"title"     	: "Head shots",
+			"subtitle"  	: "Quickest headshots",
+			"description" 	: "Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
+			"videos"    	: 1234,
+			"views"  		: "5,000"
+		},
+		{
+			"bid"        	: 1003,
+			"title"     	: "Team Game",
+			"subtitle"  	: "Best team games",
+			"description" 	: "Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
+			"videos"    	: 11234,
+			"views"  		: "2,500"
+		}
+
+	]
+}]
+}

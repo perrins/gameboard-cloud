@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-Gameboard Ltd 
-=======
 <Replace this text with the license you've chosen for your project.>
->>>>>>> 890b33720f0fdd6a7b29611ccbaff8fbe3a1934c

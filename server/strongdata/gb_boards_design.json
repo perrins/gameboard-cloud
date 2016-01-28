@@ -1,0 +1,7 @@
+{
+  "views": {
+    "view": {
+      "map": "function(doc) {\n  emit(doc._id, 1);\n  emit(doc.bid,1);\n }"
+    }
+  }
+}

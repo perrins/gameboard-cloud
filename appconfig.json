@@ -1,0 +1,53 @@
+{
+    "applicationId": "b8ffd56d-8050-47ba-b309-b03f2024a937",
+    "applicationRoute": "http://gameboard-us-cloud.mybluemix.net",
+    "RESTCONTEXT" : "/rest",
+    "zurmoHost" : "http://localhost:8080/zurmo/app/index.php/",
+    "zurmoAPI" : {
+        "enable" : true,
+        "auth" : "zurmo/api/login",
+        "create": "contacts/contact/api/create",
+        "read" : "contacts/contact/api/read"
+    },
+    "zurmoAuth" : {
+      "Accept" : "application/json",
+      "ZURMO_API_REQUEST_TYPE": "REST",
+      "ZURMO_AUTH_USERNAME": "admin",
+      "ZURMO_AUTH_PASSWORD": "password"
+    },
+    "zurmoCreate" : {
+        "Accept" : "application/json",
+        "ZURMO_API_REQUEST_TYPE": "REST",
+        "ZURMO_SESSION_ID": "",
+        "ZURMO_TOKEN": ""
+    },
+    "local"   : true,
+    "localserver" : "http://localhost:3002",
+    "mqlocal" : true,
+	"mqlight": {
+	    "name": "notify-mq",
+	    "label": "mqlight",
+	    "plan": "standard",
+	    "credentials": {
+	      "username": "2WqmngF9Afrg",
+	      "connectionLookupURI": "http://mqlightprod-lookup.ng.bluemix.net/Lookup?serviceId=d704b0f8-93f4-40c5-a654-c1fe15c4bf40",
+	      "password": "WNst2QnXgaPA",
+	      "version": "2"
+		}
+	},
+
+    "cloudantDb" : {
+      "username": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix",
+      "password": "3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1",
+      "host": "4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix.cloudant.com",
+      "port": 443,
+      "url": "https://4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix:3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1@4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix.cloudant.com"
+    },
+    "SECURITY_PUBLICKEY" : "P7Y2L-QgGFNW4XKgBOnQTB6xd3I",
+    "SECURITY_SECRET" : "59nK4Vmpp5TCAruXhJaoG8yK7dc",
+    "FACEBOOK_SECRET" : "ba101a7e4335b00641ff2d4bd591c58f",
+    "TWITTER_TOKEN" : "2895896230-OYGLSrjwOPIdS8FsnXs7lsB0BYCgiB3PmAwSekY",
+    "TWITTER_SECRET" : "lDvip9XsIZTMoT4ONxA3xi2NSwebfHVwn5GkWCgjpaoQ5",
+  	"PUBLISH_TOPIC" : "gameboard/notify/message",
+    "SHARE_ID" : "gb-notify-node-back-end"
+}
