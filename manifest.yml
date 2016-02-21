@@ -9,5 +9,5 @@ applications:
   services:
   - gameboard-cloud-ama
   - gameboard-cloud-push
-  - gameboard-cloud-cloud-data
+  - gameboard-cloud-data
   - gameboard-cloud-objects
