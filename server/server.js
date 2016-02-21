@@ -16,7 +16,10 @@ var loopback = require('loopback'),
     cookieParser = require('cookie-parser'),
     fs = require("fs"),
     appConfig = JSON.parse(fs.readFileSync(process.cwd()+'/appconfig.json', 'utf8')),
-    pkg = JSON.parse(fs.readFileSync(process.cwd()+'/package.json', 'utf8'));
+    pkg = JSON.parse(fs.readFileSync(process.cwd()+'/package.json', 'utf8')),
+    express = require("express"),
+    logger = require('winston'),
+    pkgcloud = require('pkgcloud-bluemix-objectstorage');
 
 logger.info(" _____ _                 _ ".red);
 logger.info("/  __ \\ |               | |".red);
@@ -36,13 +39,45 @@ var dbconfig = {
     cookies: {}
 };
 
+var objs = null;
+if (process.env.VCAP_SERVICES) {
+    var services = JSON.parse(process.env.VCAP_SERVICES);
+    objs = services['Object-Storage'][0];
+} else {
+    // Specify local Postgresql connection properties here.
+    objs = {
+
+        "name": "commerce-storage",
+        "label": "Object-Storage",
+        "plan": "Beta",
+        "credentials": {
+            "auth_url": "https://identity.open.softlayer.com",
+            "project": "object_storage_d8657e54_bf49_4fd3_b50c_3d57e082bf42",
+            "projectId": "933f98cff648481cbef13560b4252262",
+            "region": "dallas",
+            "userId": "5a5e43d537794e18bbebd13094fc7868",
+            "username": "Admin_dca6155ed3c33b1394f19032573e4e33d9fcb8c3",
+            "password": "NcZkUcX**B0Dc8MZ",
+            "domainId": "091bd4ed737f494ca9fe50fbc05c5fd3",
+            "domainName": "901473"
+        }
+    }
+
+}
+
+if (_.isNull(objs)) {
+    logger.error("Object Storage configuraiton is not valid");
+    exit;
+}
+
+
 // Create a LoopBack instance
 var app = module.exports = loopback();
 
 //redirect to cloudcode doc page when accessing the root context
-app.get('/', function(req, res) {
-    res.redirect('http://game-board.co/');
-});
+//app.get('/', function(req, res) {
+//    res.redirect('http://game-board.co/');
+//});
 
 
 // ------------ Protecting mobile backend with Mobile Client Access start -----------------
@@ -83,6 +118,70 @@ app.serverInit = function() {
         req.logger = logger;
         next();
     });
+
+    // constructing configuration for pkgcloud - pulls information from VCAP_SERVICES (objs)
+    var config = {};
+
+    config.provider = "openstack";
+    config.authUrl = 'https://identity.open.softlayer.com/';
+    config.region= 'dallas';
+    config.useServiceCatalog = true;
+    // true for apps inside bluemix, otherwise false
+    config.useInternal = false;
+    config.tenantId = objs.credentials.projectId;
+    config.userId = objs.credentials.userId;
+    config.username = objs.credentials.username;
+    config.password = objs.credentials.password;
+    config.auth = {
+        forceUri  : "https://identity.open.softlayer.com/v3/auth/tokens",
+        // use public for apps outside bluemix and internal for apps inside bluemix
+        interfaceName : "public",
+        "identity": {
+            "methods": [
+                "password"
+            ],
+            "password": {
+                "user": {
+                    "id": objs.credentials.userId,
+                    "password": objs.credentials.password
+                }
+            }
+        },
+        "scope": {
+            "project": {
+                "id": objs.credentials.projectId
+            }
+        }
+    };
+
+    // creates a pkgcloud storage client
+    var storageClient = pkgcloud.storage.createClient(config);
+    storageClient.auth(function (error) {
+        if (error) {
+            console.error("storageClient.auth() : error creating storage client: ", error);
+        }
+        else {
+            // creates a proxy server if the storage client successfully authenticates
+            // we are going to send up the endpoint /dam/:container/:downFile to connect to our object storage on bluemix
+            var proxyRouter = express.Router();
+            app.use('/dam', proxyRouter);
+
+            app.get('/dam/:container/:downFile', function(req, res) {
+                // this is using the pkgcloud api - we are piping the requested file from the requested container into the response
+                storageClient.download({
+                    container: req.params.container,
+                    remote: req.params.downFile
+                }).pipe(res);
+            });
+        }
+    });
+
+    var baseUrl = app.get('url').replace(/\/$/, '');
+    console.log('Web server listening at: %s', baseUrl);
+    var componentExplorer = app.get('loopback-component-explorer');
+    if (componentExplorer) {
+        console.log('Browse your REST API at %s%s', baseUrl, componentExplorer.mountPath);
+    }
 
     // Load the Notification System
     //var notify = require("./lib/notify")(appConfig,logger);
@@ -206,6 +305,67 @@ app.serverInit = function() {
 
 };
 
+app.storageInit = function() {
+
+    // constructing configuration for pkgcloud - pulls information from VCAP_SERVICES (objs)
+    var config = {};
+
+    config.provider = "openstack";
+    config.authUrl = 'https://identity.open.softlayer.com/';
+    config.region= 'dallas';
+    config.useServiceCatalog = true;
+    // true for apps inside bluemix, otherwise false
+    config.useInternal = false;
+    config.tenantId = objs.credentials.projectId;
+    config.userId = objs.credentials.userId;
+    config.username = objs.credentials.username;
+    config.password = objs.credentials.password;
+    config.auth = {
+        forceUri  : "https://identity.open.softlayer.com/v3/auth/tokens",
+        // use public for apps outside bluemix and internal for apps inside bluemix
+        interfaceName : "public",
+        "identity": {
+            "methods": [
+                "password"
+            ],
+            "password": {
+                "user": {
+                    "id": objs.credentials.userId,
+                    "password": objs.credentials.password
+                }
+            }
+        },
+        "scope": {
+            "project": {
+                "id": objs.credentials.projectId
+            }
+        }
+    };
+
+    // creates a pkgcloud storage client
+    var storageClient = pkgcloud.storage.createClient(config);
+    storageClient.auth(function (error) {
+        if (error) {
+            console.error("storageClient.auth() : error creating storage client: ", error);
+        }
+        else {
+            // creates a proxy server if the storage client successfully authenticates
+            // we are going to send up the endpoint /dam/:container/:downFile to connect to our object storage on bluemix
+            var proxyRouter = express.Router();
+            app.use('/dam', proxyRouter);
+
+            app.get('/dam/:container/:downFile', function(req, res) {
+                // this is using the pkgcloud api - we are piping the requested file from the requested container into the response
+                storageClient.download({
+                    container: req.params.container,
+                    remote: req.params.downFile
+                }).pipe(res);
+            });
+        }
+    });
+
+}
+
 app.start = function () {
 
 	// start the web server
@@ -216,12 +376,14 @@ app.start = function () {
         //Use Bluemix host and port ...
         var host = process.env.VCAP_APP_HOST || 'localhost';
         var port = process.env.VCAP_APP_PORT || 3001;
-//        app.set('host', host);
-//        app.set('port', port);
 
         // Initialise the none Strong Loop Routes and Services
         app.serverInit();
 
+        // Initialize the Storage Proxy
+        app.storageInit();
+
+        // Initialize the Explorer
         var baseUrl = app.get('url').replace(/\/$/, '');
 		logger.info('Web server listening at: %s', baseUrl);
 		var componentExplorer = app.get('loopback-component-explorer');
