@@ -4,9 +4,10 @@ applications:
   instances: 1
   domain: mybluemix.net
   name: gameboard-cloud
-  host: gameboard-us-cloud
+  host: gameboard-cloud
   disk_quota: 1024M
   services:
-  - gameboard-cloud-AdvancedMobileAccess
-  - gameboard-cloud-imfpush
-  - gameboard-cloud-cloudantNoSQLDB
+  - gameboard-cloud-ama
+  - gameboard-cloud-push
+  - gameboard-cloud-cloud-data
+  - gameboard-cloud-objects
