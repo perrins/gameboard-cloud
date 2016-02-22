@@ -1,20 +1,16 @@
 #!/bin/bash
 # bulk.sh
 UIDPW=
-AUTH="$(python -c 'import base64; print base64.urlsafe_b64encode("4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix:3baba86f581b4a9ab11aa22854dbf387a58f08f89df0dd163c3ce52b7171fcc1")')"
+AUTH="$(python -c 'import base64; print base64.urlsafe_b64encode("de29b333-01b3-422e-ba41-187222b73313-bluemix:5bcd345391613eee9a199760dbe22cedc9cfbd9d37b90a914894a4e71a4ed37f")')"
 ACURL="curl -s --proto '=https' -iv -g -H 'Authorization: Basic ${AUTH}'"
-HOST="https://4e7d5e08-b9ca-487e-ab20-44b4481c5b8c-bluemix.cloudant.com"
+HOST="https://de29b333-01b3-422e-ba41-187222b73313-bluemix.cloudant.com"
 
 # gb_categories - categories
 eval ${ACURL} -X DELETE '${HOST}/gb_categories'
 eval ${ACURL} -X PUT '${HOST}/gb_categories'
-eval ${ACURL} -H "Content-Type:application/json" -d @gb_categories.json -vX POST '${HOST}/gb_categories/_bulk_docs'
 eval ${ACURL} -H "Content-Type:application/json" -d @security.json -vX PUT '${HOST}/gb_categories/_security'
-
-# gb_categories - genres
+eval ${ACURL} -H "Content-Type:application/json" -d @gb_categories.json -vX POST '${HOST}/gb_categories/_bulk_docs'
 eval ${ACURL} -H "Content-Type:application/json" -d @gb_genres.json -vX POST '${HOST}/gb_categories/_bulk_docs'
-
-# gb_categories - games
 eval ${ACURL} -H "Content-Type:application/json" -d @gb_games.json -vX POST '${HOST}/gb_categories/_bulk_docs'
 
 # gb_boards
@@ -40,6 +36,4 @@ eval ${ACURL} -X DELETE '${HOST}/gb_metadata'
 eval ${ACURL} -X PUT '${HOST}/gb_metadata'
 eval ${ACURL} -H "Content-Type:application/json" -d @security.json -vX PUT '${HOST}/gb_metadata/_security'
 #eval ${ACURL} -H "Content-Type:application/json" -d @gb_countries.json -vX POST '${HOST}/gb_metadata/_bulk_docs'
-
-# gb_metadata - platforms
 #eval ${ACURL} -H "Content-Type:application/json" -d @gb_platforms.json -vX POST '${HOST}/gb_metadata/_bulk_docs'

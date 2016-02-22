@@ -1,5 +1,5 @@
 {
-  "name": "Categories",
+  "name": "Boards",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
@@ -7,18 +7,28 @@
     "validateUpsert": true
   },
   "properties": {
-    "gmid": {
+    "bid": {
       "type": "number",
       "id": true,
       "required": true
     },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
     "banner": {
       "type": "string"
     },
-    "categories": {
-      "type": [
-        "Boards"
-      ]
+    "videos": {
+      "type": "number"
+    },
+    "views": {
+      "type": "number"
     }
   },
   "validations": [],

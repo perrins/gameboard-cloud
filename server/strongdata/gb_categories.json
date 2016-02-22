@@ -10,7 +10,7 @@
 			"subtitle"  	: "Best golden gun moments",
 			"description" 	:"Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
 			"videos"    	: 1234,
-			"views"  		: "1,2345,000"
+			"views"  		: 1234500
 		},
 		{
 			"bid"        	: 1002,
@@ -18,7 +18,7 @@
 			"subtitle"  	: "Quickest headshots",
 			"description" 	: "Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
 			"videos"    	: 1234,
-			"views"  		: "5,000"
+			"views"  		: 5000
 		},
 		{
 			"bid"        	: 1003,
@@ -26,7 +26,7 @@
 			"subtitle"  	: "Best team games",
 			"description" 	: "Imagine all the best golden gun moments in one organised leader board and watch the best of the best",
 			"videos"    	: 11234,
-			"views"  		: "2,500"
+			"views"  		: 2500
 		}
 
 	]

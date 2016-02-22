@@ -46,6 +46,18 @@
   },
   "Categories": {
     "dataSource": "gb_categories",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Boards": {
+    "dataSource": "gb_boards",
     "public": true
+  },
+  "Videos": {
+    "dataSource": "gb_videos",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

@@ -1,7 +1,7 @@
 {"docs": [
         {
             "gid": 1,
-            "imageUrl": "4.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/4.jpg",
             "title": "Action",
             "subTitle": "Games involving action",
             "count": 4,
@@ -11,7 +11,7 @@
         },
         {
             "gid": 2,
-            "imageUrl": "1.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/1.jpg",
             "title": "Shooter",
             "subTitle": "First person shooter games",
             "count": 4,
@@ -20,7 +20,7 @@
         },
         {
             "gid": 3,
-            "imageUrl": "3.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/3.jpg",
             "title": "Role playing",
             "subTitle": "Role Playing & RPGs",
             "count": 4,
@@ -29,7 +29,7 @@
         },
         {
             "gid": 4,
-            "imageUrl": "2.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/2.jpg",
             "title": "Simulation",
             "subTitle": "Simulation games",
             "count": 4,
@@ -38,7 +38,7 @@
         },
         {
             "gid": 5,
-            "imageUrl": "5.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/5.jpg",
             "title": "Strategy",
             "subTitle": "Strategy games",
             "count": 4,
@@ -47,7 +47,7 @@
         },
         {
             "gid": 6,
-            "imageUrl": "6.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/6.jpg",
             "title": "Music",
             "subTitle": "Music games",
             "count": 4,
@@ -56,7 +56,7 @@
         },
         {
             "gid": 7,
-            "imageUrl": "7.jpg",
+            "imageUrl": "http://gameboard-cloud.mybluemix.net/api/objects/gameboard/7.jpg",
             "title": "Racing",
             "subTitle": "Racing games",
             "count": 4,

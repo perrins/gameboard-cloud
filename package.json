@@ -1,4 +1,6 @@
 {
+  "name": "gameboard-cloud",
+  "description": "gameboard-cloud server for managing services",
   "author": "Gameboard",
   "version": "0.0.2",
   "engines": {
@@ -52,7 +54,6 @@
     "when": "*"
   },
   "repository": {},
-  "description": "gameboard-cloud server for managing services",
   "license": "gameboard",
   "main": "server/server.js",
   "scripts": {

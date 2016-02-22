@@ -1,30 +1,45 @@
 {
-  "name": "Genres",
+  "name": "Videos",
   "base": "PersistedModel",
   "strict": false,
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "gid": {
+    "uuid": {
       "type": "number",
       "id": true
     },
-    "imageUrl": {
+    "ytimage": {
+      "type": "string"
+    },
+    "ytid": {
+      "type": "string"
+    },
+    "yturl": {
       "type": "string"
     },
     "title": {
       "type": "string"
     },
-    "subtitle": {
+    "description": {
       "type": "string"
     },
-    "count": {
+    "views": {
       "type": "string"
     },
-    "endDate": {
-      "type": "date"
+    "rank": {
+      "type": "string"
+    },
+    "prize": {
+      "type": "string"
+    },
+    "gametag": {
+      "type": "string"
+    },
+    "muuid": {
+      "type": "number"
     }
   },
   "validations": [],

@@ -45,23 +45,23 @@ if (process.env.VCAP_SERVICES) {
     objs = services['Object-Storage'][0];
 } else {
     // Specify local Postgresql connection properties here.
-    objs = {
-
-        "name": "commerce-storage",
-        "label": "Object-Storage",
-        "plan": "Beta",
-        "credentials": {
-            "auth_url": "https://identity.open.softlayer.com",
-            "project": "object_storage_d8657e54_bf49_4fd3_b50c_3d57e082bf42",
-            "projectId": "933f98cff648481cbef13560b4252262",
-            "region": "dallas",
-            "userId": "5a5e43d537794e18bbebd13094fc7868",
-            "username": "Admin_dca6155ed3c33b1394f19032573e4e33d9fcb8c3",
-            "password": "NcZkUcX**B0Dc8MZ",
-            "domainId": "091bd4ed737f494ca9fe50fbc05c5fd3",
-            "domainName": "901473"
-        }
-    }
+    objs =
+            {
+                "name": "gameboard-cloud-objects",
+                "label": "Object-Storage",
+                "plan": "Beta",
+                "credentials": {
+                    "auth_url": "https://identity.open.softlayer.com",
+                    "project": "object_storage_f5ddf4ee_f7d8_491f_b87a_b683b921c7df",
+                    "projectId": "b782d65489024ce5a785d80cc2bf908d",
+                    "region": "dallas",
+                    "userId": "04f499d9ef3e43bda29e46f2df9dcd7a",
+                    "username": "admin_f5ddf4ee-f7d8-491f-b87a-b683b921c7df_4db867286d76",
+                    "password": "Tz(KhpX.86fqC3og",
+                    "domainId": "1040acb5f7c6470095ae3ad5592a418b",
+                    "domainName": "839541"
+                }
+            };
 
 }
 
@@ -164,9 +164,9 @@ app.serverInit = function() {
             // creates a proxy server if the storage client successfully authenticates
             // we are going to send up the endpoint /dam/:container/:downFile to connect to our object storage on bluemix
             var proxyRouter = express.Router();
-            app.use('/dam', proxyRouter);
+            app.use('/api/objects', proxyRouter);
 
-            app.get('/dam/:container/:downFile', function(req, res) {
+            app.get('/api/objects/:container/:downFile', function(req, res) {
                 // this is using the pkgcloud api - we are piping the requested file from the requested container into the response
                 storageClient.download({
                     container: req.params.container,
@@ -175,13 +175,6 @@ app.serverInit = function() {
             });
         }
     });
-
-    var baseUrl = app.get('url').replace(/\/$/, '');
-    console.log('Web server listening at: %s', baseUrl);
-    var componentExplorer = app.get('loopback-component-explorer');
-    if (componentExplorer) {
-        console.log('Browse your REST API at %s%s', baseUrl, componentExplorer.mountPath);
-    }
 
     // Load the Notification System
     //var notify = require("./lib/notify")(appConfig,logger);
@@ -243,16 +236,11 @@ app.serverInit = function() {
 
         // REGISTER CLOUDANT Based Routes pass Notification service into them
         var routers = [
-            "videos",
-            "members",
             "favourites",
-            "notifications",
             "bookmarks",
-            "search",
             "youtube",
-            "genres",
-            "games",
-            "categories",
+            "members",
+            "search",
             "social"
         ];
 
@@ -268,10 +256,6 @@ app.serverInit = function() {
         //notify.send(["setup"], {"initilized":true});
         logger.info("Routes Registered !!".green);
         logger.info("Server Ready ..... bring it on !".green)
-
-        //}).catch(function(err){
-        //    console.log(err);
-        //});
 
     };
 
